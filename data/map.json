@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "country": "Afghanistan",
+    "members": 1,
+    "status": "Retentionist"
+  },
+  {
+    "id": 2,
+    "country": "Australia",
+    "members": 6,
+    "status": "Abolitionist"
+  },
+  {
+    "id": 3,
+    "country": "Bangladesh",
+    "members": 3,
+    "status": "Retentionist"
+  },
+  {
+    "id": 4,
+    "country": "China",
+    "members": 1,
+    "status": "Retentionist"
+  },
+  {
+    "id": 5,
+    "country": "Hong Kong",
+    "members": 4,
+    "status": "Abolitionist"
+  },
+  {
+    "id": 6,
+    "country": "India",
+    "members": 10,
+    "status": "Retentionist"
+  },
+  {
+    "id": 7,
+    "country": "Indonesia",
+    "members": 5,
+    "status": "Retentionist"
+  },
+  {
+    "id": 8,
+    "country": "Japan",
+    "members": 5,
+    "status": "Retentionist"
+  },
+  {
+    "id": 9,
+    "country": "South Korea",
+    "members": 3,
+    "status": "Abolitionist de facto"
+  },
+  {
+    "id": 10,
+    "country": "Malaysia",
+    "members": 6,
+    "status": "Retentionist"
+  },
+  {
+    "id": 11,
+    "country": "Mongolia",
+    "members": 1,
+    "status": "Abolitionist"
+  },
+  {
+    "id": 12,
+    "country": "Nepal",
+    "members": 1,
+    "status": "Abolitionist"
+  },
+  {
+    "id": 13,
+    "country": "New Zealand",
+    "members": 1,
+    "status": "Abolitionist"
+  },
+  {
+    "id": 14,
+    "country": "Pakistan",
+    "members": 8,
+    "status": "Retentionist"
+  },
+  {
+    "id": 15,
+    "country": "Papua New Guinea",
+    "members": 3,
+    "status": "Abolitionist de facto"
+  },
+  {
+    "id": 16,
+    "country": "Philippines",
+    "members": 2,
+    "status": "Abolitionist"
+  },
+  {
+    "id": 17,
+    "country": "Singapore",
+    "members": 5,
+    "status": "Retentionist"
+  },
+  {
+    "id": 18,
+    "country": "Sri Lanka",
+    "members": 2,
+    "status": "Abolitionist de facto"
+  },
+  {
+    "id": 19,
+    "country": "Taiwan",
+    "members": 2,
+    "status": "Retentionist"
+  },
+  {
+    "id": 20,
+    "country": "Thailand",
+    "members": 5,
+    "status": "Retentionist"
+  },
+  {
+    "id": 21,
+    "country": "Tonga",
+    "members": 1,
+    "status": "Abolitionist de facto"
+  },
+  {
+    "id": 22,
+    "country": "Vietnam",
+    "members": 1,
+    "status": "Retentionist"
+  }
+]
