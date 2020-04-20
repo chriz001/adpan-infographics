@@ -22,6 +22,11 @@ const Container = styled.div`
   -webkit-tap-highlight-color: transparent;
 `;
 
+const fadeIn = keyframes`
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+`;
+
 const Content = styled.div`
   color: #ffffff;
   position: absolute;
@@ -31,7 +36,7 @@ const Content = styled.div`
   cursor: default;
   border-radius: 4px;
   background-color: #da0b0b;
-  animation: ${fadeIn} ease-in-out 0.65s;
+  animation: ${fadeIn} ease-in-out 0.2s;
   width: 200px;
 
   bottom: calc(100% + 45px);
@@ -48,9 +53,4 @@ const Arrow = styled.div`
   border-right: 20px solid transparent;
   border-top: 16px solid #da0b0b;
   border-left: 20px solid transparent;
-`;
-
-const fadeIn = keyframes`
-  0% { opacity: 0; }
-  100% { opacity: 1; }
 `;

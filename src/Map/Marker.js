@@ -1,16 +1,23 @@
 import React from "react";
+import styled from "styled-components";
 
 const Marker = ({ coords, radius = 4, color = "white", label }) => {
   return (
     <g transform={`translate(${coords[0]}, ${coords[1]})`}>
       <circle fill={color} opacity={0.5} r={radius}></circle>
       {label && (
-        <text dx={0} dy={6} fill="white" textAnchor="middle">
+        <Label dx={0} dy={6}>
           {label}
-        </text>
+        </Label>
       )}
     </g>
   );
 };
+
+const Label = styled.text`
+  pointer-events: none;
+  fill: white;
+  text-anchor: middle;
+`;
 
 export default Marker;

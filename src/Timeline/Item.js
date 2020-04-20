@@ -17,8 +17,8 @@ export default function TimelineItem({ width, item, prevYear, ...rest }) {
       <Line>
         <div
           ref={ref}
-          //onMouseEnter={() => setVisible(true)}
-          //onMouseLeave={() => setVisible(false)}
+          onMouseEnter={() => setVisible(true)}
+          onMouseLeave={() => setVisible(false)}
           onClick={() => setVisible(true)}
         >
           <Tooltip content={<Details item={item} />} visible={visible}>
