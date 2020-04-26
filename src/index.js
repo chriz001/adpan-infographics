@@ -12,10 +12,18 @@ if (timelineElement) {
   ReactDOM.render(<Timeline items={timelineData} />, timelineElement);
 }
 
-import Map from "./Map";
-import mapData from "../data/map";
+import Members from "./Members";
+import membersData from "../data/members";
 
-const mapElement = document.getElementById("map");
-if (mapElement) {
-  ReactDOM.render(<Map items={mapData} />, mapElement);
+const membersElement = document.getElementById("members");
+if (membersElement) {
+  ReactDOM.render(<Members items={membersData} />, membersElement);
+}
+
+import Executions from "./Executions";
+import executionsData from "../data/executions";
+
+const executionsElement = document.getElementById("executions");
+if (executionsElement) {
+  ReactDOM.render(<Executions items={executionsData} />, executionsElement);
 }

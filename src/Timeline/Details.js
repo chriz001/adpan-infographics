@@ -4,11 +4,11 @@ import styled from "styled-components";
 export default function Details({ item, ...rest }) {
   return (
     <Content {...rest}>
-      <div>{item.Date}</div>
-      <Title>{item.Event}</Title>
-      <div>{item.Name}</div>
-      <div>{item.Details}</div>
-      <div> {item.Location}</div>
+      <div>{item.date}</div>
+      <Title>{item.event}</Title>
+      <div>{item.name}</div>
+      <div>{item.details}</div>
+      <div> {item.location}</div>
     </Content>
   );
 }

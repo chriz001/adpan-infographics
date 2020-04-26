@@ -3,30 +3,15 @@ import styled from "styled-components";
 import useResizeObserver from "use-resize-observer";
 import { lighten } from "polished";
 
-import { geoMercator, geoPath, geoCentroid } from "d3-geo";
+import { geoMercator, geoPath, geoCentroid, geoArea } from "d3-geo";
 import { feature } from "topojson-client";
 
 import topology from "./topology";
-import Marker from "./Marker";
-import Popover from "./Popover";
-import Details from "./Details";
+import Popover from "../Popover";
 
-const getColor = (status) =>
-  ({
-    Abolitionist: "#1ab2b8",
-    "Abolitionist de facto": "#f2be1a",
-    Retentionist: "#d8121b",
-  }[status]);
-
-const Map = ({ items }) => {
+const Map = ({ items, details, marker, legend, getColor }) => {
   const [referenceElement, setReferenceElement] = useState(null);
   const [activeCountry, setActiveCountry] = useState(null);
-
-  const sortedItems = items
-    .sort(function (a, b) {
-      return a.members - b.members;
-    })
-    .reverse();
 
   const worldData = feature(topology, topology.objects.land);
   const { ref, width = 425, height = 300 } = useResizeObserver();
@@ -42,10 +27,21 @@ const Map = ({ items }) => {
     setActiveCountry(item);
   };
 
+  const sortedItems = items
+    .sort(function (a, b) {
+      const a1 = worldData.features.find((element) => element.id === a.country);
+      const b1 = worldData.features.find((element) => element.id === b.country);
+      return geoArea(a1) - geoArea(b1);
+    })
+    .reverse();
+
   return (
     <Wrapper>
       <Popover referenceElement={referenceElement}>
-        <Details item={activeCountry} color={getColor(activeCountry?.status)} />
+        {React.cloneElement(details, {
+          item: activeCountry,
+          color: getColor(activeCountry?.status),
+        })}
       </Popover>
       <SvgContainer ref={ref} style={{ height: width * 0.8 }}>
         {width > 0 && (
@@ -53,7 +49,7 @@ const Map = ({ items }) => {
             <g>
               {worldData.features.map((d, i) => {
                 const item = items.find((e) => e.country === d.id);
-                const color = item ? getColor(item.status) : "#dadada";
+                const color = getColor(item?.status);
                 return (
                   <g
                     key={`country-${d.id}`}
@@ -75,8 +71,15 @@ const Map = ({ items }) => {
                 const d = worldData.features.find(
                   (element) => element.id === item.country
                 );
+
+                if (d === undefined) {
+                  console.log(item);
+                  return null;
+                }
+
                 const ref =
                   activeCountry?.country === d.id ? setReferenceElement : null;
+
                 return (
                   d && (
                     <g
@@ -85,12 +88,11 @@ const Map = ({ items }) => {
                       onMouseOver={setActive(d.id)}
                       onMouseOut={setActive(null)}
                     >
-                      <Marker
-                        coords={projection(geoCentroid(d))}
-                        radius={item.members * 2 + 8}
-                        color={lighten(0.05, getColor(item.status))}
-                        label={item.members}
-                      />
+                      {React.cloneElement(marker, {
+                        coords: projection(geoCentroid(d)),
+                        color: lighten(0.05, getColor(item.status)),
+                        item: item,
+                      })}
                     </g>
                   )
                 );
@@ -99,13 +101,7 @@ const Map = ({ items }) => {
           </Svg>
         )}
       </SvgContainer>
-      <Legend>
-        <LegendItem color="#dadada">Non-Member</LegendItem>
-        <LegendItem color="#1ab2b8">Abolitionist</LegendItem>
-        <LegendItem color="#f2be1a">Abolitionist de facto</LegendItem>
-        <LegendItem color="#d8121b">Retentionist</LegendItem>
-        <Note>number = members in the country</Note>
-      </Legend>
+      {legend}
     </Wrapper>
   );
 };
@@ -125,35 +121,10 @@ const Wrapper = styled.div`
 const SvgContainer = styled.div`
   flex-basis: 100%;
   height: 100vw;
-  max-height: 620px;
+  max-height: 720px;
 `;
 
 const Svg = styled.svg`
   width: 100%;
   height: 100%;
-`;
-
-const Legend = styled.div`
-  font-size: 14px;
-  white-space: nowrap;
-  font-family: "league-gothic-1", sans-serif;
-`;
-
-const LegendItem = styled.div`
-  margin-bottom: 8px;
-  font-size: 20px;
-  &::before {
-    display: inline-block;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background-color: ${(p) => p.color};
-    border-radius: 10px;
-    margin-right: 8px;
-    margin-bottom: -2px;
-  }
-`;
-
-const Note = styled.div`
-  font-size: 14px;
 `;

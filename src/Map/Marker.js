@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Marker = ({ coords, radius = 4, color = "white", label }) => {
+const Marker = ({ coords, radius = 8, color = "white", label }) => {
   return (
     <g transform={`translate(${coords[0]}, ${coords[1]})`}>
       <circle fill={color} opacity={0.5} r={radius}></circle>

@@ -12,7 +12,7 @@ export default function TimelineItem({ width, item, prevYear, ...rest }) {
   useOnClickOutside(ref, () => setVisible(false), visible);
   return (
     <Item w={width} {...rest}>
-      <Title>{item.Event}</Title>
+      <Title>{item.event}</Title>
       <Separator />
       <Line>
         <div
@@ -27,8 +27,8 @@ export default function TimelineItem({ width, item, prevYear, ...rest }) {
         </div>
       </Line>
       <Date>
-        <Month>{item.Month}</Month>
-        {prevYear !== item.Year && <Year>{item.Year}</Year>}
+        <Month>{item.month}</Month>
+        {prevYear !== item.year && <Year>{item.year}</Year>}
       </Date>
     </Item>
   );

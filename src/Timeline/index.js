@@ -41,7 +41,7 @@ export default function Timeline({ items, width = 160 }) {
         rubberband: true,
         bounds: {
           enabled: true,
-          top: parent && parentWidth - trackWidth, // / 6,,
+          top: parent && parentWidth - trackWidth, // / 6
           bottom: 0,
         },
       },
