@@ -24,9 +24,11 @@ export default function Timeline({ items, width = 160 }) {
       onDrag: (props) => {
         handleChange(props.offset[0]);
       },
+      /*
       onWheel: (props) => {
         handleChange(-props.offset[1]); // * 6
       },
+      */
     },
     {
       drag: {
@@ -37,6 +39,7 @@ export default function Timeline({ items, width = 160 }) {
           left: 0,
         },
       },
+      /*
       wheel: {
         rubberband: true,
         bounds: {
@@ -45,6 +48,7 @@ export default function Timeline({ items, width = 160 }) {
           bottom: 0,
         },
       },
+      */
     }
   );
 
@@ -97,6 +101,8 @@ const Track = animated(styled.div`
   position: relative;
   height: 400px;
   flex-direction: row-reverse;
+  cursor: grab;
+  padding-bottom: 20px;
 `);
 
 const Progress = styled.div`
@@ -104,7 +110,7 @@ const Progress = styled.div`
   position: relative;
   height: 1px;
   background-color: #da0b0b;
-  margin: 20px auto;
+  margin: 0 auto;
 `;
 
 const Bar = animated(styled.div`
