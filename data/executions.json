@@ -2,7 +2,7 @@
   {
     "country": "Afghanistan",
     "status": "Retentionist",
-    "lastExecution": 20181,
+    "lastExecution": "20181",
     "inmates": "≥5382",
     "method": "hanging, firing squad3",
     "footnote": "1 Three executions (Amnesty International). Estimate unreliable due to lack of media reporting on capital punishment (Cornell Law School).\n2 At the end of 2019 (Amnesty International).\n3 Hanging under the penal code. Some executions by firing squad recently (Cornell Law School)."
@@ -14,7 +14,7 @@
   {
     "country": "Bangladesh",
     "status": "Retentionist",
-    "lastExecution": 20201,
+    "lastExecution": "20201",
     "inmates": "≥1,7182",
     "method": "hanging",
     "footnote": "1 At least one execution (The New York Times, Bangladesh Executes Killer of Country’s Independence Leader, 11 April 2020 https://www.nytimes.com/aponline/2020/04/11/world/asia/ap-as-bangladesh-execution.html).\n2 At the end of 2019 (Amnesty International)."
@@ -26,7 +26,7 @@
   {
     "country": "Brunei",
     "status": "Abolitionist in practice",
-    "lastExecution": 19571,
+    "lastExecution": "19571",
     "inmates": "≥02",
     "method": "hanging, stoning3",
     "footnote": "1 (Cornell Law School).\n2 At the end of 2019 (Amnesty International). \n3 As of 2019 (Amnesty International)."
@@ -54,15 +54,15 @@
   {
     "country": "India",
     "status": "Retentionist",
-    "lastExecution": 20201,
-    "inmates": 3782,
+    "lastExecution": "20201",
+    "inmates": "3782",
     "method": "Hanging, firing squad3",
     "footnote": "1 At least four executions (Cornell Law School). \n2 At the end of 2019 (Amnesty International).\n3 Cornell Law School."
   },
   {
     "country": "Indonesia",
     "status": "Retentionist",
-    "lastExecution": 20161,
+    "lastExecution": "20161",
     "inmates": "≥3082",
     "method": "firing squad3",
     "footnote": "1 Four executions (Cornell Law School).\n2 As at the end of 2019 (Amnesty International).\n3 Cornell Law School."
@@ -70,16 +70,16 @@
   {
     "country": "Japan",
     "status": "Retentionist",
-    "lastExecution": "+020191-12-25T14:00:00.000Z",
-    "inmates": 1212,
+    "lastExecution": "26 December 20191",
+    "inmates": "1212",
     "method": "hanging",
     "footnote": "1 Three executions in 2019 (Cornell Law School).\n2 At the end of 2019 (Amnesty International)."
   },
   {
     "country": "Kazakhstan",
     "status": "Abolitionist for ordinary crimes only",
-    "lastExecution": 20031,
-    "inmates": 12,
+    "lastExecution": "20031",
+    "inmates": "12",
     "method": "shooting",
     "footnote": "1 Last known execution – 12 people (Open Dialogue Foundation https://en.odfoundation.eu/a/3986,kazakhstan-and-the-death-penalty-reform-of-the-criminal-code-counters-the-abolitionist-tendency/).\n2. Continued to observe moratoriums on executions as at the end of 2019 (Amnesty International)."
   },
@@ -90,7 +90,7 @@
   {
     "country": "Laos",
     "status": "Abolitionist in practice",
-    "lastExecution": 19891,
+    "lastExecution": "19891",
     "inmates": "≥02",
     "method": "firing squad",
     "footnote": "1 Last known execution (Cornell Law School). \n2 At the end of 2019 (Amnesty International)."
@@ -102,16 +102,16 @@
   {
     "country": "Malaysia",
     "status": "Retentionist",
-    "lastExecution": 20171,
-    "inmates": 12802,
+    "lastExecution": "20171",
+    "inmates": "12802",
     "method": "hanging",
     "footnote": "1 Cornell Law School.\n2 At the end of 2019 (Amnesty International)."
   },
   {
     "country": "Maldives",
     "status": "Abolitionist in practice",
-    "lastExecution": 19541,
-    "inmates": 192,
+    "lastExecution": "19541",
+    "inmates": "192",
     "method": "Lethal Injection, hanging1",
     "footnote": "1 Cornell Law School.\n2 At the end of 2019 (Amnesty International)."
   },
@@ -122,7 +122,7 @@
   {
     "country": "Myanmar",
     "status": "Abolitionist in practice",
-    "lastExecution": 19881,
+    "lastExecution": "19881",
     "inmates": "≥02",
     "method": "hanging1",
     "footnote": "1 Cornell Law School.\n2 At the end of 2019 (Amnesty International)."
@@ -154,7 +154,7 @@
   {
     "country": "Pakistan",
     "status": "Retentionist",
-    "lastExecution": 20191,
+    "lastExecution": "20191",
     "inmates": "≥40002",
     "method": "hanging",
     "footnote": "1 14 executions (Cornell Law School).\n2 At the end of 2019 (Amnesty International)."
@@ -162,8 +162,8 @@
   {
     "country": "Papua New Guinea",
     "status": "Abolitionist in practice",
-    "lastExecution": 19541,
-    "inmates": 202,
+    "lastExecution": "19541",
+    "inmates": "202",
     "method": "hanging, lethal injection, firing squad, asphyxiation, electrocution3",
     "footnote": "1. Cornell Law School.\n2. At the end of 2019 (Amnesty International).\n3. Cornell Law School."
   },
@@ -178,7 +178,7 @@
   {
     "country": "Singapore",
     "status": "Retentionist",
-    "lastExecution": 20191,
+    "lastExecution": "20191",
     "inmates": "≥402",
     "method": "hanging3",
     "footnote": "1 Four executions in 20191 (Amnesty International).\n2 At the end of 2019 (Amnesty International).\n3 Amnesty International."
@@ -190,15 +190,15 @@
   {
     "country": "South Korea",
     "status": "Abolitionist in practice",
-    "lastExecution": "+019971-12-29T14:00:00.000Z",
-    "inmates": 612,
+    "lastExecution": "30 December 19971",
+    "inmates": "612",
     "method": "hanging, firing squad3",
     "footnote": "1 Cornell Law School.\n2 At the end of 2019 (Amnesty International).\n3 Hanging and shooting by firing squad for military offences (Cornell Law School)."
   },
   {
     "country": "Sri Lanka",
     "status": "Abolitionist in practice",
-    "lastExecution": 1976,
+    "lastExecution": "1976",
     "inmates": "≥1,0001",
     "method": "hanging",
     "footnote": "1 At the end of 2019 (Amnesty International)."
@@ -206,24 +206,24 @@
   {
     "country": "Taiwan",
     "status": "Retentionist",
-    "lastExecution": 20201,
-    "inmates": 392,
+    "lastExecution": "20201",
+    "inmates": "392",
     "method": "firing squad, lethal injection",
     "footnote": "1 At least one execution (Taipei Times, Death row inmate Weng executed, 3 April 2020). phttps://www.taipeitimes.com/News/taiwan/archives/2020/04/03/2003733919).\n2 At the end of 2019 (Amnesty International)."
   },
   {
     "country": "Tajikistan",
     "status": "Abolitionist in practice",
-    "lastExecution": 20041,
-    "inmates": 2,
+    "lastExecution": "20041",
+    "inmates": "2",
     "method": "firing squad",
     "footnote": "1 Several executed (Cornell Law School).\n2 Continued to observe moratoriums on executions as at the end of 2019 (Amnesty International)."
   },
   {
     "country": "Thailand",
     "status": "Retentionist",
-    "lastExecution": "+020181-06-17T14:00:00.000Z",
-    "inmates": 3122,
+    "lastExecution": "18 June 20181",
+    "inmates": "3122",
     "method": "lethal injection",
     "footnote": "1 One execution (Cornell Law School).\n2 At the end of 2019 (Amnesty International)."
   },
@@ -246,7 +246,7 @@
   {
     "country": "Vietnam",
     "status": "Retentionist",
-    "lastExecution": 20181,
+    "lastExecution": "20181",
     "inmates": "≥2492",
     "method": "lethal Injection3",
     "footnote": "1 At least 85 executions (Cornell Law School).\n2 At the end of 2019 (Amnesty International).\n3 Shooting by firing squad until 2013 (Cornell Law School)."
