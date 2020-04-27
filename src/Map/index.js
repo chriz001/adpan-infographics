@@ -20,7 +20,7 @@ const Map = ({
   const [referenceElement, setReferenceElement] = useState(null);
   const [activeCountry, setActiveCountry] = useState(null);
 
-  const worldData = feature(topology, topology.objects.land);
+  const worldData = feature(topology, topology.objects.features);
   const { ref, width = 425, height = 300 } = useResizeObserver();
 
   const projection = geoMercator()
@@ -29,14 +29,16 @@ const Map = ({
 
   const path = geoPath().projection(projection);
 
-  const setActive = (id) => () => {
-    const item = items.find((e) => e.country === id);
+  const setActive = (country) => () => {
+    const item = items.find((e) => e.country === country);
     setActiveCountry(item);
   };
 
   const data = items
     .map((item) => {
-      const d = worldData.features.find(({ id }) => id === item.country);
+      const d = worldData.features.find(
+        ({ properties: p }) => p.GEOUNIT === item.country
+      );
       return {
         ...item,
         center: d && projection(geoCentroid(d)),
@@ -60,12 +62,13 @@ const Map = ({
           <Svg>
             <g>
               {worldData.features.map((d) => {
-                const item = items.find((e) => e.country === d.id);
+                const country = d.properties.GEOUNIT;
+                const item = items.find((e) => e.country === country);
                 const color = getColor(item?.status);
                 return (
                   <g
-                    key={`country-${d.id}`}
-                    onMouseOver={setActive(d.id)}
+                    key={`country-${country}`}
+                    onMouseOver={setActive(country)}
                     onMouseOut={setActive(null)}
                   >
                     <path
@@ -81,7 +84,7 @@ const Map = ({
             <g>
               {data.map((item) => {
                 if (item.center === undefined) {
-                  console.log("Not Found:", item.country);
+                  console.log("Not Found:", item);
                   return null;
                 }
 

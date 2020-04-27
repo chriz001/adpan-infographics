@@ -4,9 +4,9 @@
 
 var fs = require("fs");
 
-var inputFile = "./world.json",
+var inputFile = "./features.json",
   outputFile = "./output.json",
-  keep = ["geounit"];
+  keep = ["GEOUNIT"];
 
 function editFunct(feature) {
   feature.TID = feature.properties.TID; // set the TID in the feature
