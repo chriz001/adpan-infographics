@@ -43,6 +43,7 @@ const Map = ({ items, details, marker, legend, getColor }) => {
           color: getColor(activeCountry?.status),
         })}
       </Popover>
+      {legend}
       <SvgContainer ref={ref} style={{ height: width * 0.8 }}>
         {width > 0 && (
           <Svg>
@@ -79,6 +80,7 @@ const Map = ({ items, details, marker, legend, getColor }) => {
 
                 const ref =
                   activeCountry?.country === d.id ? setReferenceElement : null;
+                const center = projection(geoCentroid(d));
 
                 return (
                   d && (
@@ -89,10 +91,16 @@ const Map = ({ items, details, marker, legend, getColor }) => {
                       onMouseOut={setActive(null)}
                     >
                       {React.cloneElement(marker, {
-                        coords: projection(geoCentroid(d)),
+                        coords: center,
                         color: lighten(0.05, getColor(item.status)),
                         item: item,
                       })}
+                      <Label
+                        dy={12}
+                        transform={`translate(${center[0]}, ${center[1]})`}
+                      >
+                        {d.id}
+                      </Label>
                     </g>
                   )
                 );
@@ -101,7 +109,6 @@ const Map = ({ items, details, marker, legend, getColor }) => {
           </Svg>
         )}
       </SvgContainer>
-      {legend}
     </Wrapper>
   );
 };
@@ -115,6 +122,7 @@ const Wrapper = styled.div`
   @media (min-width: 768px) {
     display: flex;
     flex-wrap: no-wrap;
+    flex-direction: row-reverse;
   }
 `;
 
@@ -127,4 +135,11 @@ const SvgContainer = styled.div`
 const Svg = styled.svg`
   width: 100%;
   height: 100%;
+`;
+
+const Label = styled.text`
+  pointer-events: none;
+  fill: black;
+  font-size: 10px;
+  text-anchor: middle;
 `;

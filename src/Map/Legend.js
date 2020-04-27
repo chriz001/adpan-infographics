@@ -17,7 +17,11 @@ const Legend = ({ title, items, note, getColor }) => {
 
 const LegendContainer = styled.div`
   font-size: 14px;
-  max-width: 300px;
+  margin-bottom: 20px;
+  @media (min-width: 768px) {
+    margin-left: 10px;
+    max-width: 300px;
+  }
 `;
 
 const LegendTitle = styled.div`

@@ -19,10 +19,11 @@ const Executions = ({ items }) => {
 
 const getColor = (status) =>
   ({
+    Abolitionist: "#00A9B0",
     "Abolitionist in practice": "#F0B700",
     "Abolitionist for ordinary crimes only": "#E8622A",
     Retentionist: "#d8121b",
-  }[status] || "#00A9B0");
+  }[status] || "#dadada");
 
 const Details = ({ item, color, ...rest }) => {
   if (!item) return null;
@@ -43,7 +44,7 @@ const ExecutionsLegend = () => (
     title="THE DEATH PENALTY IN ASIA PACIFIC"
     getColor={getColor}
     items={[
-      "Abolitionist for all crimes",
+      "Abolitionist",
       "Abolitionist in practice",
       "Abolitionist for ordinary crimes only",
       "Retentionist",
