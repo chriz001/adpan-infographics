@@ -8,6 +8,10 @@
     "footnote": "1 Three executions (Amnesty International). Estimate unreliable due to lack of media reporting on capital punishment (Cornell Law School).\n2 At the end of 2019 (Amnesty International).\n3 Hanging under the penal code. Some executions by firing squad recently (Cornell Law School)."
   },
   {
+    "country": "Australia",
+    "status": "Abolitionist"
+  },
+  {
     "country": "Bangladesh",
     "status": "Retentionist",
     "lastExecution": 20201,
@@ -73,7 +77,7 @@
   },
   {
     "country": "Kazakhstan",
-    "status": "Abolitionist in practice",
+    "status": "Abolitionist for ordinary crimes only",
     "lastExecution": 20031,
     "inmates": 12,
     "method": "shooting",
@@ -129,6 +133,10 @@
   },
   {
     "country": "New Caledonia",
+    "status": "Abolitionist"
+  },
+  {
+    "country": "New Zealand",
     "status": "Abolitionist"
   },
   {
