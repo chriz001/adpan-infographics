@@ -9,7 +9,14 @@ import { feature } from "topojson-client";
 import topology from "./topology";
 import Popover from "../Popover";
 
-const Map = ({ items, details, marker, legend, getColor }) => {
+const Map = ({
+  items,
+  details,
+  marker,
+  legend,
+  getColor,
+  labelSize = 0.0005,
+}) => {
   const [referenceElement, setReferenceElement] = useState(null);
   const [activeCountry, setActiveCountry] = useState(null);
 
@@ -22,17 +29,21 @@ const Map = ({ items, details, marker, legend, getColor }) => {
 
   const path = geoPath().projection(projection);
 
-  const setActive = (id) => (event) => {
+  const setActive = (id) => () => {
     const item = items.find((e) => e.country === id);
     setActiveCountry(item);
   };
 
-  const sortedItems = items
-    .sort(function (a, b) {
-      const a1 = worldData.features.find((element) => element.id === a.country);
-      const b1 = worldData.features.find((element) => element.id === b.country);
-      return geoArea(a1) - geoArea(b1);
+  const data = items
+    .map((item) => {
+      const d = worldData.features.find(({ id }) => id === item.country);
+      return {
+        ...item,
+        center: d && projection(geoCentroid(d)),
+        size: d && geoArea(d),
+      };
     })
+    .sort((a, b) => a.size - b.size)
     .reverse();
 
   return (
@@ -48,7 +59,7 @@ const Map = ({ items, details, marker, legend, getColor }) => {
         {width > 0 && (
           <Svg>
             <g>
-              {worldData.features.map((d, i) => {
+              {worldData.features.map((d) => {
                 const item = items.find((e) => e.country === d.id);
                 const color = getColor(item?.status);
                 return (
@@ -68,41 +79,38 @@ const Map = ({ items, details, marker, legend, getColor }) => {
               })}
             </g>
             <g>
-              {sortedItems.map((item, i) => {
-                const d = worldData.features.find(
-                  (element) => element.id === item.country
-                );
-
-                if (d === undefined) {
-                  console.log(item);
+              {data.map((item) => {
+                if (item.center === undefined) {
+                  console.log("Not Found:", item.country);
                   return null;
                 }
 
                 const ref =
-                  activeCountry?.country === d.id ? setReferenceElement : null;
-                const center = projection(geoCentroid(d));
+                  activeCountry?.country === item.country
+                    ? setReferenceElement
+                    : null;
 
                 return (
-                  d && (
-                    <g
-                      key={`marker-${d.id}`}
-                      ref={ref}
-                      onMouseOver={setActive(d.id)}
-                      onMouseOut={setActive(null)}
-                    >
-                      {React.cloneElement(marker, {
-                        coords: center,
-                        color: lighten(0.05, getColor(item.status)),
-                        item: item,
-                      })}
+                  <g
+                    key={`marker-${item.country}`}
+                    ref={ref}
+                    onMouseOver={setActive(item.country)}
+                    onMouseOut={setActive(null)}
+                  >
+                    {React.cloneElement(marker, {
+                      coords: item.center,
+                      color: lighten(0.05, getColor(item.status)),
+                      item: item,
+                    })}
+                    {item.size < labelSize && (
                       <Label
                         dy={12}
-                        transform={`translate(${center[0]}, ${center[1]})`}
+                        transform={`translate(${item.center[0]}, ${item.center[1]})`}
                       >
-                        {d.id}
+                        {item.country}
                       </Label>
-                    </g>
-                  )
+                    )}
+                  </g>
                 );
               })}
             </g>

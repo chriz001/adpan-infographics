@@ -36,7 +36,12 @@ const Details = ({ item, color, ...rest }) => {
 };
 
 const Marker = ({ ...props }) => {
-  return <MapMarker {...props}></MapMarker>;
+  return (
+    <MapMarker
+      {...props}
+      color={props.item.size > 0.0005 ? "transparent" : props.color}
+    ></MapMarker>
+  );
 };
 
 const ExecutionsLegend = () => (

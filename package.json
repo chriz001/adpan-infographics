@@ -1,5 +1,6 @@
 {
   "name": "adpan",
+  "author": "Chris Rowe | chriz001@gmail.com",
   "private": true,
   "scripts": {
     "start": "parcel index.html",
