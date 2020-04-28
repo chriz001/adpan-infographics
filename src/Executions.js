@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Map from "./Map";
-import MapMarker from "./Map/Marker";
+import MapMarker, { MarkerLabel } from "./Map/Marker";
 import Legend from "./Map/Legend";
 
 const Executions = ({ items }) => {
@@ -35,12 +35,16 @@ const Details = ({ item, color, ...rest }) => {
   );
 };
 
-const Marker = ({ ...props }) => {
+const Marker = (props) => {
+  let { coords: c } = props;
+  if (props.item.country === "Hong Kong") c = [c[0] + 5, c[1] - 5];
+  if (props.item.country === "Macau") c = [c[0] - 5, c[1]];
   return (
     <MapMarker
       {...props}
+      coords={c}
       color={props.item.size > 0.0005 ? "transparent" : props.color}
-    ></MapMarker>
+    />
   );
 };
 

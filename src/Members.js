@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Map from "./Map";
-import MapMarker from "./Map/Marker";
+import MapMarker, { MarkerLabel } from "./Map/Marker";
 import Legend from "./Map/Legend";
 
 const Members = ({ items }) => (
@@ -32,8 +32,12 @@ const Details = ({ item, color, ...rest }) => {
   );
 };
 
-const Marker = ({ item, ...props }) => (
-  <MapMarker {...props} label={item.members} radius={item.members * 2 + 8} />
+const Marker = (props) => (
+  <MapMarker
+    {...props}
+    radius={props.item.members * 2 + 8}
+    label={props.item.members}
+  />
 );
 
 const MembersLegend = () => (

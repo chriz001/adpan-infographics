@@ -9,14 +9,7 @@ import { feature } from "topojson-client";
 import topology from "./topology";
 import Popover from "../Popover";
 
-const Map = ({
-  items,
-  details,
-  marker,
-  legend,
-  getColor,
-  labelSize = 0.0005,
-}) => {
+const Map = ({ items, details, marker, legend, getColor }) => {
   const [referenceElement, setReferenceElement] = useState(null);
   const [activeCountry, setActiveCountry] = useState(null);
 
@@ -105,14 +98,6 @@ const Map = ({
                       color: lighten(0.05, getColor(item.status)),
                       item: item,
                     })}
-                    {item.size < labelSize && (
-                      <Label
-                        dy={12}
-                        transform={`translate(${item.center[0]}, ${item.center[1]})`}
-                      >
-                        {item.country}
-                      </Label>
-                    )}
                   </g>
                 );
               })}
@@ -146,11 +131,4 @@ const SvgContainer = styled.div`
 const Svg = styled.svg`
   width: 100%;
   height: 100%;
-`;
-
-const Label = styled.text`
-  pointer-events: none;
-  fill: black;
-  font-size: 10px;
-  text-anchor: middle;
 `;
