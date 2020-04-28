@@ -1,17 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useSpring, animated } from "react-spring";
 import { useGesture } from "react-use-gesture";
 import styled from "styled-components";
 import useResizeObserver from "use-resize-observer";
 
+import Popover from "../Popover";
 import Item from "./Item";
+import Details from "./Details";
 
-export default function Timeline({ items, width = 160 }) {
+export default function Timeline({ items, itemWidth = 160 }) {
+  const popoverRef = useRef();
   const [scrollSize, setScrollSize] = useState(0);
-  const [{ x }, springSet] = useSpring(() => ({ x: 0 }));
+  const [{ x }, springSet] = useSpring(() => ({
+    x: 0,
+    onFrame: () => popoverRef.current.updatePopover(),
+  }));
   const [{ scroll }, scrollSet] = useSpring(() => ({ scroll: 0 }));
   const { ref: parent, width: parentWidth = 425 } = useResizeObserver();
-  const trackWidth = width * items.length;
+  const trackWidth = itemWidth * items.length;
+
+  const [referenceElement, setReferenceElement] = useState(null);
+  const [activeEvent, setActiveEvent] = useState(null);
 
   const handleChange = (value) => {
     const dragBoundary = parentWidth - trackWidth;
@@ -24,11 +33,6 @@ export default function Timeline({ items, width = 160 }) {
       onDrag: (props) => {
         handleChange(props.offset[0]);
       },
-      /*
-      onWheel: (props) => {
-        handleChange(-props.offset[1]); // * 6
-      },
-      */
     },
     {
       drag: {
@@ -39,16 +43,6 @@ export default function Timeline({ items, width = 160 }) {
           left: 0,
         },
       },
-      /*
-      wheel: {
-        rubberband: true,
-        bounds: {
-          enabled: true,
-          top: parent && parentWidth - trackWidth, // / 6
-          bottom: 0,
-        },
-      },
-      */
     }
   );
 
@@ -65,14 +59,19 @@ export default function Timeline({ items, width = 160 }) {
         {...bind()}
         style={{ transform: x.interpolate((x) => `translateX(${x}px)`) }}
       >
-        {items.map((item, i) => (
-          <Item
-            key={i}
-            width={width}
-            item={item}
-            prevYear={items[i - 1]?.Year}
-          />
-        ))}
+        {items.map((item, i) => {
+          const ref = activeEvent === item ? setReferenceElement : null;
+          return (
+            <Item
+              key={i}
+              width={itemWidth}
+              item={item}
+              prevYear={items[i - 1]?.Year}
+              dotReference={ref}
+              setActive={setActiveEvent}
+            />
+          );
+        })}
       </Track>
       <Progress>
         <Bar
@@ -84,6 +83,15 @@ export default function Timeline({ items, width = 160 }) {
           }}
         />
       </Progress>
+      <Popover
+        ref={popoverRef}
+        referenceElement={referenceElement}
+        color="#d8121b"
+        placement="top"
+        modifiers={[{ name: "offset", options: { offset: [-4, 32] } }]}
+      >
+        <Details item={activeEvent} />
+      </Popover>
     </Wrapper>
   );
 }

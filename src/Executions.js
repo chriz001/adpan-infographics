@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 
 import Map from "./Map";
@@ -28,9 +28,27 @@ const getColor = (status) =>
 const Details = ({ item, color, ...rest }) => {
   if (!item) return null;
   return (
-    <Content {...rest} style={{ color: color }}>
-      <Title>{item.country}</Title>
-      {item.status}
+    <Content {...rest}>
+      <Title style={{ color: color }}>{item.country}</Title>
+      <Status style={{ color: color }}>{item.status}</Status>
+      {item.status !== "Abolitionist" && (
+        <>
+          <SubTitle>DATE OF LAST EXECUTION</SubTitle>
+          {item.lastExecution}
+          <SubTitle>CURRENT NUMBER OF DEATH ROW INMATES</SubTitle>
+          {item.inmates}
+          <SubTitle>METHOD(S) OF EXECUTION</SubTitle>
+          {item.method}
+          <Notes>
+            {item.footnote.split("\n").map((item, key) => (
+              <Fragment key={key}>
+                {item}
+                <br />
+              </Fragment>
+            ))}
+          </Notes>
+        </>
+      )}
     </Content>
   );
 };
@@ -75,15 +93,33 @@ const ExecutionsLegend = () => (
 );
 
 const Content = styled.div`
-  width: 100%;
-  font-family: "league-gothic-1", sans-serif;
   text-align: center;
-  text-transform: uppercase;
-  font-size: 18px;
+  max-width: 300px;
 `;
 
 const Title = styled.div`
   font-size: 24px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-family: "league-gothic-1", sans-serif;
+`;
+
+const Status = styled.div`
+  font-size: 18px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-family: "league-gothic-1", sans-serif;
+`;
+
+const SubTitle = styled.div`
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 20px;
+`;
+
+const Notes = styled.div`
+  font-size: 12px;
+  margin-top: 20px;
 `;
 
 export default Executions;

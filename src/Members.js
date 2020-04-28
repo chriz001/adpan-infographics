@@ -55,11 +55,11 @@ const MembersLegend = () => (
 );
 
 const Content = styled.div`
-  width: 100%;
   font-family: "league-gothic-1", sans-serif;
   text-align: center;
   text-transform: uppercase;
   font-size: 18px;
+  padding: 0 20px;
 `;
 
 const Title = styled.div`
