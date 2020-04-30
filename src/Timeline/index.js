@@ -21,11 +21,26 @@ export default function Timeline({ items, itemWidth = 160 }) {
 
   const [referenceElement, setReferenceElement] = useState(null);
   const [activeEvent, setActiveEvent] = useState(null);
+  const [delayHandler, setDelayHandler] = useState(null);
 
   const handleChange = (value) => {
     const dragBoundary = parentWidth - trackWidth;
     springSet({ x: value });
     scrollSet({ scroll: (value * 100) / dragBoundary });
+  };
+
+  const setActive = (value) => () => {
+    clearTimeout(delayHandler);
+    if (value === true) return;
+    if (value) {
+      setActiveEvent(value);
+    } else {
+      setDelayHandler(
+        setTimeout(() => {
+          setActiveEvent(null);
+        }, 200)
+      );
+    }
   };
 
   const bind = useGesture(
@@ -68,7 +83,7 @@ export default function Timeline({ items, itemWidth = 160 }) {
               item={item}
               prevYear={items[i - 1]?.Year}
               dotReference={ref}
-              setActive={setActiveEvent}
+              setActive={setActive}
             />
           );
         })}
@@ -83,12 +98,14 @@ export default function Timeline({ items, itemWidth = 160 }) {
           }}
         />
       </Progress>
+      <Swipe>{"< swipe >"}</Swipe>
       <Popover
         ref={popoverRef}
         referenceElement={referenceElement}
         color="#d8121b"
         placement="top"
         modifiers={[{ name: "offset", options: { offset: [-4, 32] } }]}
+        setActive={setActive}
       >
         <Details item={activeEvent} />
       </Popover>
@@ -130,3 +147,11 @@ const Bar = animated(styled.div`
   width: 100px;
   background-color: #da0b0b;
 `);
+
+const Swipe = styled.div`
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 10px;
+  margin-top: 10px;
+  color: #b2b2b2;
+`;

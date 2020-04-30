@@ -12,6 +12,7 @@ import Popover from "../Popover";
 const Map = ({ items, details, marker, legend, getColor }) => {
   const [referenceElement, setReferenceElement] = useState(null);
   const [activeCountry, setActiveCountry] = useState(null);
+  const [delayHandler, setDelayHandler] = useState(null);
 
   const worldData = feature(topology, topology.objects.features);
   const { ref, width = 425, height = 300 } = useResizeObserver();
@@ -23,8 +24,19 @@ const Map = ({ items, details, marker, legend, getColor }) => {
   const path = geoPath().projection(projection);
 
   const setActive = (country) => () => {
-    const item = items.find((e) => e.country === country);
-    setActiveCountry(item);
+    clearTimeout(delayHandler);
+    if (country === true) return;
+
+    if (country) {
+      const item = items.find((e) => e.country === country);
+      setActiveCountry(item);
+    } else {
+      setDelayHandler(
+        setTimeout(() => {
+          setActiveCountry(null);
+        }, 100)
+      );
+    }
   };
 
   const data = items
@@ -43,7 +55,11 @@ const Map = ({ items, details, marker, legend, getColor }) => {
 
   return (
     <Wrapper>
-      <Popover referenceElement={referenceElement}>
+      <Popover
+        referenceElement={referenceElement}
+        setActive={setActive}
+        country={activeCountry?.country}
+      >
         {React.cloneElement(details, {
           item: activeCountry,
           color: getColor(activeCountry?.status),
@@ -65,6 +81,7 @@ const Map = ({ items, details, marker, legend, getColor }) => {
                     onMouseOut={setActive(null)}
                   >
                     <path
+                      data-map={true}
                       d={path(d)}
                       fill={color}
                       stroke="#fff"

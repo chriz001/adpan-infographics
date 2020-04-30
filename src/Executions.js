@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 
 import Map from "./Map";
-import MapMarker, { MarkerLabel } from "./Map/Marker";
+import MapMarker from "./Map/Marker";
 import Legend from "./Map/Legend";
 
 const Executions = ({ items }) => {
@@ -34,16 +34,31 @@ const Details = ({ item, color, ...rest }) => {
       {item.status !== "Abolitionist" && (
         <>
           <SubTitle>DATE OF LAST EXECUTION</SubTitle>
-          {item.lastExecution}
+          <div
+            dangerouslySetInnerHTML={{
+              __html: item.lastExecution,
+            }}
+          />
           <SubTitle>CURRENT NUMBER OF DEATH ROW INMATES</SubTitle>
-          {item.inmates}
+          <div
+            dangerouslySetInnerHTML={{
+              __html: item.inmates,
+            }}
+          />
           <SubTitle>METHOD(S) OF EXECUTION</SubTitle>
-          {item.method}
+          <div
+            dangerouslySetInnerHTML={{
+              __html: item.method,
+            }}
+          />
           <Notes>
             {item.footnote.split("\n").map((item, key) => (
               <Fragment key={key}>
-                {item}
-                <br />
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: item,
+                  }}
+                />
               </Fragment>
             ))}
           </Notes>
@@ -80,12 +95,20 @@ const ExecutionsLegend = () => (
       <>
         Sources:
         <p>
-          Death Penalty Database, Cornell Center of the Death Penalty Worldwide,
-          Cornell Law School.
+          <a href="https://dpw.pointjupiter.co/search.cfm" target="_blank">
+            Death Penalty Database, Cornell Center of the Death Penalty
+            Worldwide, Cornell Law School.
+          </a>
         </p>
         <p>
-          Amnesty International. Amnesty International Global Report – Death
-          Sentences and Executions 2018 © Amnesty International 2019.
+          <a
+            href="https://www.amnesty.org/download/Documents/ACT5018472020ENGLISH.PDF"
+            target="_blank"
+          >
+            Amnesty International. Amnesty International Global Report - Death
+            Sentences and Executions 2019 © Amnesty International 2020 ACT
+            50/1847/2020
+          </a>
         </p>
       </>
     }
@@ -120,6 +143,9 @@ const SubTitle = styled.div`
 const Notes = styled.div`
   font-size: 12px;
   margin-top: 20px;
+  a {
+    color: #b2b2b2;
+  }
 `;
 
 export default Executions;

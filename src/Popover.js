@@ -3,7 +3,10 @@ import styled from "styled-components";
 import { usePopper } from "react-popper";
 
 const Popover = forwardRef(
-  ({ referenceElement, children, color = "white", ...props }, ref) => {
+  (
+    { referenceElement, children, color = "white", setActive, ...props },
+    ref
+  ) => {
     const [popperElement, setPopperElement] = React.useState(null);
     const [arrowElement, setArrowElement] = React.useState(null);
     const { styles, attributes, update } = usePopper(
@@ -32,6 +35,8 @@ const Popover = forwardRef(
         style={styles.popper}
         {...attributes.popper}
         color={color}
+        onMouseOver={setActive(true)}
+        onMouseOut={setActive(null)}
       >
         {children}
         <Arrow
@@ -53,8 +58,8 @@ export const Container = styled.div`
   border-radius: 4px;
   text-align: left;
   box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.5);
-  pointer-events: none;
   z-index: 9999;
+  cursor: default;
 
   &[data-popper-placement^="top"] > [data-popper-arrow] {
     bottom: -10px;

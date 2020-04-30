@@ -16,8 +16,8 @@ export default function TimelineItem({
       <Line>
         <Dot
           ref={dotReference}
-          onMouseEnter={() => setActive(item)}
-          onMouseLeave={() => setActive(null)}
+          onMouseEnter={setActive(item)}
+          onMouseLeave={setActive(null)}
         />
       </Line>
       <Date>
