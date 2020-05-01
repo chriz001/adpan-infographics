@@ -3,6 +3,8 @@ import "core-js/modules/es.array.find";
 import "core-js/modules/es.object.entries";
 import "core-js/modules/es.object.values";
 import "core-js/modules/es.object.assign";
+import "core-js/modules/es.promise";
+import "core-js/modules/es.symbol";
 
 import React from "react";
 import ReactDOM from "react-dom";
