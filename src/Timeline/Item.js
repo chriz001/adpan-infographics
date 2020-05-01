@@ -46,6 +46,7 @@ const Title = styled.div`
   font-family: "league-gothic-1", sans-serif;
   font-size: 22px;
   text-transform: uppercase;
+  width: 100%;
 `;
 
 const Separator = styled.div`
