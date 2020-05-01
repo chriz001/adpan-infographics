@@ -1,4 +1,4 @@
-import "resize-observer-polyfill";
+import "core-js/modules/es.array.fill";
 
 import React from "react";
 import ReactDOM from "react-dom";

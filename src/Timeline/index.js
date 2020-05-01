@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useSpring, animated } from "react-spring/web.cjs";
 import { useGesture } from "react-use-gesture";
 import styled from "styled-components";
-import useResizeObserver from "use-resize-observer";
+import useResizeObserver from "use-resize-observer/polyfilled";
 
 import Popover from "../Popover";
 import Item from "./Item";

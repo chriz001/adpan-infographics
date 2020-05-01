@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import useResizeObserver from "use-resize-observer";
+import useResizeObserver from "use-resize-observer/polyfilled";
 import { lighten } from "polished";
 
 import { geoMercator, geoPath, geoCentroid, geoArea } from "d3-geo";
