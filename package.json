@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "parcel index.html",
-    "build": "NODE_ENV=production parcel build index.html --no-source-maps --no-content-hash --experimental-scope-hoisting"
+    "build": "NODE_ENV=production parcel build index.html --no-source-maps --no-content-hash"
   },
   "dependencies": {
     "@popperjs/core": "^2.3.3",
