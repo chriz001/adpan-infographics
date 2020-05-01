@@ -1,12 +1,3 @@
-import "core-js/modules/es.array.fill";
-import "core-js/modules/es.array.find";
-import "core-js/modules/es.object.entries";
-import "core-js/modules/es.object.values";
-import "core-js/modules/es.object.assign";
-import "core-js/modules/es.promise";
-import "core-js/modules/es.symbol";
-import "core-js/modules/es.symbol.iterator";
-
 import React from "react";
 import ReactDOM from "react-dom";
 
