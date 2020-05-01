@@ -20,7 +20,10 @@
     "use-resize-observer": "^6.1.0-alpha.3"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-bundle-visualiser": "^1.2.0"
-  }
+    "parcel-bundler": "^1.12.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "not dead"
+  ]
 }
