@@ -52,7 +52,7 @@ const Details = ({ item, color, ...rest }) => {
             }}
           />
           <Notes>
-            {item.footnote.split("\n").map((item, key) => (
+            {item.footnote?.split("\n").map((item, key) => (
               <Fragment key={key}>
                 <div
                   dangerouslySetInnerHTML={{
@@ -96,7 +96,7 @@ const ExecutionsLegend = () => (
         Sources:
         <p>
           <a href="https://dpw.pointjupiter.co/search.cfm" target="_blank">
-            Death Penalty Database, Cornell Center of the Death Penalty
+            Death Penalty Database, Cornell Center on the Death Penalty
             Worldwide, Cornell Law School.
           </a>
         </p>
