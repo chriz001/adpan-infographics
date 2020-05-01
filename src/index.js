@@ -1,4 +1,5 @@
 import "core-js/modules/es.array.fill";
+import "core-js/modules/es.object.entries";
 
 import React from "react";
 import ReactDOM from "react-dom";
