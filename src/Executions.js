@@ -143,6 +143,7 @@ const SubTitle = styled.div`
 const Notes = styled.div`
   font-size: 12px;
   margin-top: 20px;
+  text-align: left;
   a {
     color: #b2b2b2;
   }
