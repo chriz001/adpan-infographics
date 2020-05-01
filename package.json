@@ -11,6 +11,7 @@
     "d3-geo": "^1.12.0",
     "polished": "^3.5.2",
     "react": ">=16.13.1",
+    "react-app-polyfill": "^1.0.6",
     "react-dom": ">=16.13.1",
     "react-popper": "^2.2.2",
     "react-spring": "^8.0.27",
@@ -24,6 +25,7 @@
   },
   "browserslist": [
     "> 1%",
-    "not dead"
+    "not dead",
+    "ie 11"
   ]
 }
