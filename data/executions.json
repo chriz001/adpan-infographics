@@ -29,7 +29,7 @@
     "lastExecution": "1957<sup>1</sup>",
     "inmates": "≥0<sup>2</sup>",
     "method": "hanging, stoning<sup>3</sup>",
-    "footnote": "1. (Cornell Law School).\n2. At the end of 2019 (Amnesty International). \n3. As of 2019 (Amnesty International)."
+    "footnote": "1. Cornell Law School.\n2. At the end of 2019 (Amnesty International). \n3. As of 2019 (Amnesty International)."
   },
   {
     "country": "Cambodia",
@@ -41,7 +41,8 @@
     "lastExecution": "classified<sup>1</sup>",
     "inmates": "thousands<sup>2</sup>",
     "method": "lethal injection, firing squad<sup>3</sup>",
-    "footnote": "1. The exact date of the last execution is a state secret (Amnesty International).\n2. Possibly thousands. Exact number is a state secret. (Cornell Law School, Amnesty International).\n3. Firing squad discontinued in 2010 (Cornell Law School, Amnesty International)."
+    "footnote": "1. The exact date of the last execution is a state secret (Amnesty International).\n2. Possibly thousands. Exact number is a state secret. (Cornell Law School, Amnesty International).\n3. Firing squad discontinued in 2010 (Cornell Law School, Amnesty International).",
+    "casestudy": "/china-case-study-leng-guoquan/"
   },
   {
     "country": "Fiji",
@@ -57,7 +58,8 @@
     "lastExecution": "2020<sup>1</sup>",
     "inmates": "378<sup>2</sup>",
     "method": "Hanging, firing squad<sup>3</sup>",
-    "footnote": "1. At least four executions (Cornell Law School). \n2. At the end of 2019 (Amnesty International).\n3. Cornell Law School."
+    "footnote": "1. At least four executions (Cornell Law School). \n2. At the end of 2019 (Amnesty International).\n3. Cornell Law School.",
+    "casestudy": "/india-case-study-devender-pal-singh/"
   },
   {
     "country": "Indonesia",
@@ -73,7 +75,8 @@
     "lastExecution": "26 December 2019<sup>1</sup>",
     "inmates": "121<sup>2</sup>",
     "method": "hanging",
-    "footnote": "1. Three executions in 2019 (Cornell Law School).\n2. At the end of 2019 (Amnesty International)."
+    "footnote": "1. Three executions in 2019 (Cornell Law School).\n2. At the end of 2019 (Amnesty International).",
+    "casestudy": "/japan-case-study-hakamada-iwao/"
   },
   {
     "country": "Kazakhstan",
@@ -105,7 +108,8 @@
     "lastExecution": "2017<sup>1</sup>",
     "inmates": "1280<sup>2</sup>",
     "method": "hanging",
-    "footnote": "1. Cornell Law School.\n2. At the end of 2019 (Amnesty International)."
+    "footnote": "1. Cornell Law School.\n2. At the end of 2019 (Amnesty International).",
+    "casestudy": "/malaysia-case-study-reza-mohammed-shah-bin-ahmad-shah/"
   },
   {
     "country": "Maldives",
@@ -157,7 +161,8 @@
     "lastExecution": "2019<sup>1</sup>",
     "inmates": "≥4000<sup>2</sup>",
     "method": "hanging",
-    "footnote": "1. 14 executions (Cornell Law School).\n2. At the end of 2019 (Amnesty International)."
+    "footnote": "1. 14 executions (Cornell Law School).\n2. At the end of 2019 (Amnesty International).",
+    "casestudy": "/pakistan-case-study-aftab-bahadur/"
   },
   {
     "country": "Papua New Guinea",
@@ -181,7 +186,8 @@
     "lastExecution": "2019<sup>1</sup>",
     "inmates": "≥40<sup>2</sup>",
     "method": "hanging<sup>3</sup>",
-    "footnote": "1. Four executions in 20191 (Amnesty International).\n2. At the end of 2019 (Amnesty International).\n3. Amnesty International."
+    "footnote": "1. Four executions in 20191 (Amnesty International).\n2. At the end of 2019 (Amnesty International).\n3. Amnesty International.",
+    "casestudy": "/singapore-case-study-yong-vui-kong/"
   },
   {
     "country": "Solomon Islands",
@@ -209,7 +215,7 @@
     "lastExecution": "2020<sup>1</sup>",
     "inmates": "39<sup>2</sup>",
     "method": "firing squad, lethal injection",
-    "footnote": "1. At least one execution (Taipei Times, Death row inmate Weng executed, 3 April 2020). p<a href=\"https://www.taipeitimes.com/News/taiwan/archives/2020/04/03/2003733919\" target=\"_blank\">Reference</a>).\n2. At the end of 2019 (Amnesty International)."
+    "footnote": "1. At least one execution (Taipei Times, Death row inmate Weng executed, 3 April 2020). <a href=\"https://www.taipeitimes.com/News/taiwan/archives/2020/04/03/2003733919\" target=\"_blank\">Reference</a>).\n2. At the end of 2019 (Amnesty International)."
   },
   {
     "country": "Tajikistan",

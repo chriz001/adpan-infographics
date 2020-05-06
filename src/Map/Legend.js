@@ -52,7 +52,10 @@ const LegendNote = styled.div`
   margin-top: 40px;
   font-size: 14px;
   color: #b2b2b2;
-
+  p {
+    font-size: 14px;
+    line-height: 1.2;
+  }
   a {
     color: #b2b2b2;
   }

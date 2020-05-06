@@ -131,6 +131,7 @@ export default Map;
 const Wrapper = styled.div`
   width: 100%;
   position: relative;
+  line-height: 1.2;
 
   @media (min-width: 768px) {
     display: flex;

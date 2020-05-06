@@ -31,6 +31,9 @@ const Details = ({ item, color, ...rest }) => {
     <Content {...rest}>
       <Title style={{ color: color }}>{item.country}</Title>
       <Status style={{ color: color }}>{item.status}</Status>
+      {item.casestudy && (
+        <CaseLink href={item.casestudy}> View Case Study</CaseLink>
+      )}
       {item.status !== "Abolitionist" && (
         <>
           <SubTitle>DATE OF LAST EXECUTION</SubTitle>
@@ -147,6 +150,12 @@ const Notes = styled.div`
   a {
     color: #b2b2b2;
   }
+`;
+
+const CaseLink = styled.a`
+  font-size: 12px;
+  margin: 8px 0;
+  color: #b2b2b2;
 `;
 
 export default Executions;

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Map from "./Map";
-import MapMarker, { MarkerLabel } from "./Map/Marker";
+import MapMarker from "./Map/Marker";
 import Legend from "./Map/Legend";
 
 const Members = ({ items }) => (

@@ -118,6 +118,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 500px;
   user-select: none;
+  line-height: 1.2;
 `;
 
 const Track = animated(styled.div`
