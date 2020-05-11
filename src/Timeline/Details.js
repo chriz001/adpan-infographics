@@ -34,13 +34,14 @@ const Date = styled(Title)`
   margin-bottom: 8px;
 `;
 
-const Name = styled(Title)`
+const Name = styled.div`
+  border-top: 1px solid white;
+  margin-top: 8px;
+  padding-top: 8px;
   text-transform: none;
 `;
 
 const Info = styled.div`
-  border-top: 1px solid white;
-  margin-top: 8px;
   padding-top: 8px;
 `;
 
