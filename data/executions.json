@@ -5,7 +5,7 @@
     "lastExecution": "2018<sup>1</sup>",
     "inmates": "≥538<sup>2</sup>",
     "method": "hanging, firing squad<sup>3</sup>",
-    "footnote": "1. Three executions (Amnesty International). Estimate unreliable due to lack of media reporting on capital punishment (Cornell Law School).\n2. At the end of 2019 (Amnesty International).\n3. Hanging under the penal code. Some executions by firing squad recently (Cornell Law School)."
+    "footnote": "1. Three executions (Amnesty International 2019). Estimate unreliable due to lack of media reporting on capital punishment (Cornell Center on the DPW)\n2. Amnesty International 2019\n3. Hanging under the penal code. Some executions by firing squad recently (Cornell Center on the DPW)"
   },
   {
     "country": "Australia",
@@ -17,7 +17,7 @@
     "lastExecution": "2020<sup>1</sup>",
     "inmates": "≥1,718<sup>2</sup>",
     "method": "hanging",
-    "footnote": "1. At least one execution (The New York Times, Bangladesh Executes Killer of Country’s Independence Leader, 11 April 2020 <a href=\"https://www.smh.com.au/world/asia/bangladesh-executes-killer-of-countrys-independence-leader-20200412-p54j5r.html\" target=\"_blank\">Reference</a>).\n2. At the end of 2019 (Amnesty International)."
+    "footnote": "1. At least one execution (The New York Times, Bangladesh Executes Killer of Country’s Independence Leader, 11 April 2020 <a href=\"https://www.smh.com.au/world/asia/bangladesh-executes-killer-of-countrys-independence-leader-20200412-p54j5r.html\" target=\"_blank\">Reference</a>)\n2. Amnesty International 2019"
   },
   {
     "country": "Bhutan",
@@ -25,11 +25,11 @@
   },
   {
     "country": "Brunei",
-    "status": "Abolitionist in practice",
+    "status": "De facto abolitionist",
     "lastExecution": "1957<sup>1</sup>",
-    "inmates": "≥0<sup>2</sup>",
+    "inmates": "≥1<sup>2</sup>",
     "method": "hanging, stoning<sup>3</sup>",
-    "footnote": "1. Cornell Law School.\n2. At the end of 2019 (Amnesty International). \n3. As of 2019 (Amnesty International)."
+    "footnote": "1. Amnesty International July 2018\n2. Amnesty International 2019\n3. Amnesty International 2019"
   },
   {
     "country": "Cambodia",
@@ -41,7 +41,7 @@
     "lastExecution": "classified<sup>1</sup>",
     "inmates": "thousands<sup>2</sup>",
     "method": "lethal injection, firing squad<sup>3</sup>",
-    "footnote": "1. The exact date of the last execution is a state secret (Amnesty International).\n2. Possibly thousands. Exact number is a state secret. (Cornell Law School, Amnesty International).\n3. Firing squad discontinued in 2010 (Cornell Law School, Amnesty International).",
+    "footnote": "1. The exact date of the last execution is a state secret (Amnesty International 2019)\n2. Possibly thousands, although as time spent on death row prior to execution is approximately 2 months actual number of death row inmates at any given time is fewer (Cornell Center on the DPW). Exact number of executions per year is a state secret (Amnesty International 2019)\n3. Amnesty International 2019",
     "casestudy": "/china-case-study-leng-guoquan/"
   },
   {
@@ -58,7 +58,7 @@
     "lastExecution": "2020<sup>1</sup>",
     "inmates": "378<sup>2</sup>",
     "method": "Hanging, firing squad<sup>3</sup>",
-    "footnote": "1. At least four executions (Cornell Law School). \n2. At the end of 2019 (Amnesty International).\n3. Cornell Law School.",
+    "footnote": "1. At least four executions (Cornell Center on the DPW)\n2. Amnesty International 2019\n3. Cornell Center on the DPW",
     "casestudy": "/india-case-study-devender-pal-singh/"
   },
   {
@@ -67,7 +67,7 @@
     "lastExecution": "2016<sup>1</sup>",
     "inmates": "≥308<sup>2</sup>",
     "method": "firing squad<sup>3</sup>",
-    "footnote": "1. Four executions (Cornell Law School).\n2. As at the end of 2019 (Amnesty International).\n3. Cornell Law School."
+    "footnote": "1. Four executions (Amnesty International 2017)\n2. Amnesty International 2019\n3. Cornell Center on the DPW"
   },
   {
     "country": "Japan",
@@ -75,16 +75,16 @@
     "lastExecution": "26 December 2019<sup>1</sup>",
     "inmates": "121<sup>2</sup>",
     "method": "hanging",
-    "footnote": "1. Three executions in 2019 (Cornell Law School).\n2. At the end of 2019 (Amnesty International).",
+    "footnote": "1. Three executions in 2019 (Cornell Center on the DPW)\n2. Amnesty International 2019",
     "casestudy": "/japan-case-study-hakamada-iwao/"
   },
   {
     "country": "Kazakhstan",
-    "status": "Abolitionist for ordinary crimes only",
+    "status": "Abolitionist for ordinary crimes",
     "lastExecution": "2003<sup>1</sup>",
     "inmates": "1<sup>2</sup>",
     "method": "shooting",
-    "footnote": "1. Last known execution – 12 people (Open Dialogue Foundation <a href=\"https://en.odfoundation.eu/a/3986,kazakhstan-and-the-death-penalty-reform-of-the-criminal-code-counters-the-abolitionist-tendency/\" target=\"_blank\">Reference</a>).\n2. Continued to observe moratoriums on executions as at the end of 2019 (Amnesty International)."
+    "footnote": "1. Last known execution – 12 people (Open Dialogue Foundation <a href=\"https://en.odfoundation.eu/a/3986,kazakhstan-and-the-death-penalty-reform-of-the-criminal-code-counters-the-abolitionist-tendency/\" target=\"_blank\">Reference</a>)\n2. Continued to observe moratoriums on executions (Amnesty International 2019)"
   },
   {
     "country": "Kyrgyzstan",
@@ -92,11 +92,11 @@
   },
   {
     "country": "Laos",
-    "status": "Abolitionist in practice",
+    "status": "De facto abolitionist",
     "lastExecution": "1989<sup>1</sup>",
-    "inmates": "≥0<sup>2</sup>",
-    "method": "firing squad",
-    "footnote": "1. Last known execution (Cornell Law School). \n2. At the end of 2019 (Amnesty International)."
+    "inmates": "≥1<sup>2</sup>",
+    "method": "shooting<sup>3</sup>",
+    "footnote": "1. Several sources cited in Cornell Center on the DPW \n2. Amnesty International 2019\n3. Cornell Center on the DPW"
   },
   {
     "country": "Macau",
@@ -108,16 +108,16 @@
     "lastExecution": "2017<sup>1</sup>",
     "inmates": "1280<sup>2</sup>",
     "method": "hanging",
-    "footnote": "1. Cornell Law School.\n2. At the end of 2019 (Amnesty International).",
+    "footnote": "1. Amnesty International 2018\n2. Amnesty International 2019",
     "casestudy": "/malaysia-case-study-reza-mohammed-shah-bin-ahmad-shah/"
   },
   {
     "country": "Maldives",
-    "status": "Abolitionist in practice",
+    "status": "De facto abolitionist",
     "lastExecution": "1954<sup>1</sup>",
     "inmates": "19<sup>2</sup>",
     "method": "Lethal Injection, hanging<sup>1</sup>",
-    "footnote": "1. Cornell Law School.\n2. At the end of 2019 (Amnesty International)."
+    "footnote": "1. Amnesty International 2014; other sources report 1952 or 1953 cited in Cornell Center on the DPW\n2. Amnesty International 2019\n3. Cornell Center on the DPW"
   },
   {
     "country": "Mongolia",
@@ -125,11 +125,11 @@
   },
   {
     "country": "Myanmar",
-    "status": "Abolitionist in practice",
+    "status": "De facto abolitionist",
     "lastExecution": "1988<sup>1</sup>",
-    "inmates": "≥0<sup>2</sup>",
-    "method": "hanging<sup>2</sup>",
-    "footnote": "1. Cornell Law School.\n2. At the end of 2019 (Amnesty International)."
+    "inmates": "≥1<sup>2</sup>",
+    "method": "hanging<sup>3</sup>",
+    "footnote": "1. Cornell Center on the DPW\n2. Amnesty International 2019\n3. Cornell Center on the DPW"
   },
   {
     "country": "Nepal",
@@ -150,10 +150,10 @@
   {
     "country": "North Korea",
     "status": "Retentionist",
-    "lastExecution": "December 2019<sup>1</sup>",
+    "lastExecution": "May 2020<sup>1</sup>",
     "inmates": "Unknown<sup>2</sup>",
-    "method": "hanging, firing squad<sup>3</sup>",
-    "footnote": "1. At least eight executions, however reliable estimate is unavailable due to secrecy (Cornell Law School).\n2. Information not available but believed to be “a high number of prisoners under sentence of death” (Amnesty International).\n3. Cornell Law School; 2019 – Shooting (Amnesty International)."
+    "method": "shooting<sup>3</sup>",
+    "footnote": "1. At least nine executions, however reliable estimate is unavailable due to secrecy (Cornell Center on the DPW)\n2. Information not available but believed to be “a high number of prisoners under sentence of death” (Amnesty International 2019)\n3. Amnesty International 2019"
   },
   {
     "country": "Pakistan",
@@ -161,16 +161,16 @@
     "lastExecution": "2019<sup>1</sup>",
     "inmates": "≥4000<sup>2</sup>",
     "method": "hanging",
-    "footnote": "1. 14 executions (Cornell Law School).\n2. At the end of 2019 (Amnesty International).",
+    "footnote": "1. 14 executions (Cornell Center on the DPW)\n2. Amnesty International 2019",
     "casestudy": "/pakistan-case-study-aftab-bahadur/"
   },
   {
     "country": "Papua New Guinea",
-    "status": "Abolitionist in practice",
+    "status": "De facto abolitionist",
     "lastExecution": "1954<sup>1</sup>",
     "inmates": "20<sup>2</sup>",
     "method": "hanging, lethal injection, firing squad, asphyxiation, electrocution<sup>3</sup>",
-    "footnote": "1. Cornell Law School.\n2. At the end of 2019 (Amnesty International).\n3. Cornell Law School."
+    "footnote": "1. Cornell Center on the DPW\n2. Amnesty International 2019\n3. Cornell Center on the DPW"
   },
   {
     "country": "Philippines",
@@ -186,7 +186,7 @@
     "lastExecution": "2019<sup>1</sup>",
     "inmates": "≥40<sup>2</sup>",
     "method": "hanging<sup>3</sup>",
-    "footnote": "1. Four executions in 20191 (Amnesty International).\n2. At the end of 2019 (Amnesty International).\n3. Amnesty International.",
+    "footnote": "1. Four executions in 2019 (Amnesty International 2019)\n2. Amnesty International 2019\n3. Amnesty International 2019",
     "casestudy": "/singapore-case-study-yong-vui-kong/"
   },
   {
@@ -195,19 +195,19 @@
   },
   {
     "country": "South Korea",
-    "status": "Abolitionist in practice",
+    "status": "De facto abolitionist",
     "lastExecution": "30 December 1997<sup>1</sup>",
     "inmates": "61<sup>2</sup>",
     "method": "hanging, firing squad<sup>3</sup>",
-    "footnote": "1. Cornell Law School.\n2. At the end of 2019 (Amnesty International).\n3. Hanging and shooting by firing squad for military offences (Cornell Law School)."
+    "footnote": "1. Cornell Center on the DPW\n2. Amnesty International 2019\n3. Hanging and shooting by firing squad for military offences (Cornell Center on the DPW)"
   },
   {
     "country": "Sri Lanka",
-    "status": "Abolitionist in practice",
+    "status": "De facto abolitionist",
     "lastExecution": "1976",
     "inmates": "≥1,000<sup>1</sup>",
     "method": "hanging",
-    "footnote": "1. At the end of 2019 (Amnesty International)."
+    "footnote": "1. Amnesty International 2019"
   },
   {
     "country": "Taiwan",
@@ -215,14 +215,15 @@
     "lastExecution": "2020<sup>1</sup>",
     "inmates": "39<sup>2</sup>",
     "method": "firing squad, lethal injection",
-    "footnote": "1. At least one execution (Taipei Times, Death row inmate Weng executed, 3 April 2020). <a href=\"https://www.taipeitimes.com/News/taiwan/archives/2020/04/03/2003733919\" target=\"_blank\">Reference</a>).\n2. At the end of 2019 (Amnesty International)."
+    "footnote": "1. At least one execution (Taipei Times, Death row inmate Weng executed, 3 April 2020). <a href=\"https://www.taipeitimes.com/News/taiwan/archives/2020/04/03/2003733919\" target=\"_blank\">Reference</a>)\n2. Amnesty International 2019"
   },
   {
     "country": "Tajikistan",
-    "status": "Abolitionist in practice",
+    "status": "De facto abolitionist",
     "lastExecution": "2004<sup>1</sup>",
     "inmates": "0<sup>2</sup>",
-    "method": "firing squad"
+    "method": "firing squad",
+    "footnote": "1. Several executed (Cornell Center on the DPW)\n2. Continued to observe moratoriums on executions (Amnesty International 2019)"
   },
   {
     "country": "Thailand",
@@ -230,7 +231,7 @@
     "lastExecution": "18 June 2018<sup>1</sup>",
     "inmates": "312<sup>2</sup>",
     "method": "lethal injection",
-    "footnote": "1. One execution (Cornell Law School).\n2. At the end of 2019 (Amnesty International)."
+    "footnote": "1. One execution (Cornell Center on the DPW)\n2. Amnesty International 2019"
   },
   {
     "country": "Timor-Leste",
@@ -254,6 +255,6 @@
     "lastExecution": "2018<sup>1</sup>",
     "inmates": "≥249<sup>2</sup>",
     "method": "lethal Injection<sup>3</sup>",
-    "footnote": "1. At least 85 executions (Cornell Law School).\n2. At the end of 2019 (Amnesty International).\n3. Shooting by firing squad until 2013 (Cornell Law School)."
+    "footnote": "1. At least 85 executions in 2018 (Amnesty International 2018). Similar figure estimated for 2019 but not confirmed due to incomplete reporting and lack of transparency (Amnesty International 2019)\n2. Amnesty International 2019\n3. Shooting by firing squad until 2013 (Cornell Center on the DPW)"
   }
 ]

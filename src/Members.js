@@ -18,7 +18,7 @@ const Members = ({ items }) => (
 const getColor = (status) =>
   ({
     Abolitionist: "#1ab2b8",
-    "Abolitionist in practice": "#f2be1a",
+    "De facto abolitionist": "#f2be1a",
     Retentionist: "#d8121b",
   }[status] || "#dadada");
 
@@ -46,7 +46,7 @@ const MembersLegend = () => (
     getColor={getColor}
     items={[
       "Abolitionist",
-      "Abolitionist in practice",
+      "De facto abolitionist",
       "Retentionist",
       "Non-Member",
     ]}

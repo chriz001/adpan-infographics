@@ -20,7 +20,7 @@ const Executions = ({ items }) => {
 const getColor = (status) =>
   ({
     Abolitionist: "#00A9B0",
-    "Abolitionist in practice": "#F0B700",
+    "De facto abolitionist": "#F0B700",
     "Abolitionist for ordinary crimes only": "#E8622A",
     Retentionist: "#d8121b",
   }[status] || "#dadada");
@@ -90,29 +90,44 @@ const ExecutionsLegend = () => (
     getColor={getColor}
     items={[
       "Abolitionist",
-      "Abolitionist in practice",
+      "De facto abolitionist",
       "Abolitionist for ordinary crimes only",
       "Retentionist",
     ]}
     note={
       <>
         Sources:
-        <p>
-          <a href="https://dpw.pointjupiter.co/search.cfm" target="_blank">
-            Death Penalty Database, Cornell Center on the Death Penalty
-            Worldwide, Cornell Law School.
-          </a>
-        </p>
-        <p>
-          <a
-            href="https://www.amnesty.org/download/Documents/ACT5018472020ENGLISH.PDF"
-            target="_blank"
-          >
-            Amnesty International. Amnesty International Global Report - Death
-            Sentences and Executions 2019 © Amnesty International 2020 ACT
-            50/1847/2020
-          </a>
-        </p>
+        <SourceLink href="https://dpw.pointjupiter.co/search.cfm">
+          Cornell Center on the Death Penalty Worldwide, Death Penalty Database
+        </SourceLink>
+        <SourceLink href="https://www.amnesty.org/download/Documents/ACT5018472020ENGLISH.PDF">
+          Amnesty International. Amnesty International Global Report - Death
+          Sentences and Executions 2019 © Amnesty International 2020 ACT
+          50/1847/2020
+        </SourceLink>
+        <SourceLink href="https://www.amnesty.org/download/Documents/ACT5066652017ENGLISH.pdf">
+          Amnesty International, Abolitionist and Retentionist Countries as of
+          July 2018 © Amnesty International July 2018 ACT 50/6665/2017
+        </SourceLink>
+        <SourceLink href="https://www.amnesty.org/download/Documents/ACT5098702019ENGLISH.PDF">
+          Amnesty International. Amnesty International Global Report - Death
+          Sentences and Executions 2018 © Amnesty International 2019 ACT
+          50/9870/2019
+        </SourceLink>
+        <SourceLink href="https://www.amnesty.org/download/Documents/ACT5079552018ENGLISH.PDF">
+          Amnesty International. Amnesty International Global Report - Death
+          Sentences and Executions 2017 © Amnesty International 2018 ACT
+          50/7955/2018
+        </SourceLink>
+        <SourceLink href="https://www.amnesty.org/download/Documents/ACT5057402017ENGLISH.PDF">
+          Amnesty International. Amnesty International Global Report - Death
+          Sentences and Executions 2016 © Amnesty International 2017 ACT
+          50/5740/2017
+        </SourceLink>
+        <SourceLink href="https://www.amnesty.org/download/Documents/4000/act500012014en.pdf">
+          Amnesty International, Death Sentences and Executions 2013 © Amnesty
+          International Publications 2014 Act 50/001/2014
+        </SourceLink>
       </>
     }
   />
@@ -154,6 +169,13 @@ const Notes = styled.div`
 
 const CaseLink = styled.a`
   font-size: 12px;
+  margin: 8px 0;
+  color: #b2b2b2;
+`;
+
+const SourceLink = styled.a.attrs({ target: "_blank" })`
+  display: block;
+  font-size: 10px;
   margin: 8px 0;
   color: #b2b2b2;
 `;
