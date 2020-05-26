@@ -21,7 +21,7 @@ const getColor = (status) =>
   ({
     Abolitionist: "#00A9B0",
     "De facto abolitionist": "#F0B700",
-    "Abolitionist for ordinary crimes only": "#E8622A",
+    "Abolitionist for ordinary crimes": "#E8622A",
     Retentionist: "#d8121b",
   }[status] || "#dadada");
 
@@ -91,7 +91,7 @@ const ExecutionsLegend = () => (
     items={[
       "Abolitionist",
       "De facto abolitionist",
-      "Abolitionist for ordinary crimes only",
+      "Abolitionist for ordinary crimes",
       "Retentionist",
     ]}
     note={
